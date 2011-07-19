@@ -1,0 +1,135 @@
+Module  : Subforums
+Version : 1.0.1
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module implements a simple subforums system for Phorum.
+
+
+Features:
+---------
+
+- On the index page, subforums will be listed as simple links below each forum
+  that has subforums;
+
+- Formatting of these subforum links is based on a template, so it is
+  possible to modify this list to your needs (e.g. by creating a vertical
+  subforum list instead of using the default horizontal one);
+
+- On the message list page, details for the available subforums are listed
+  at the top of the page;
+
+- When marking a forum as read on the index page, then its subforums will
+  automatically be marked read as well; 
+
+- The breadcrumbs will be modified to represent the subforum structure.
+
+
+Install:
+--------
+
+- Unpack the archive and move the directory "subforums" to the directory
+  "mods" within your Phorum installation (unless this module was packaged
+  with your Phorum release);
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Subforums".
+
+- Structure the forums and folders to match this module's requirements.
+  See below for a description.
+
+
+How to organize your forums and folders:
+----------------------------------------
+
+This module is based on top of the flat index page structure, where the index
+page contains one or more categories and where forums are placed in these
+categories. This module expects the following folder/forum stucture:
+
+* First level folders are represented as categories on the index page
+
+* Second level folders are used for grouping a forum and its subforums. This
+  folder level is not shown on the index page.
+
+* Inside the second level folder, the first forum is used as the forum to
+  display on the index page as the main forum. The second forum and up
+  are displayed as subforums for the main forum.
+
+* Forums that do not have subforums can be added to a category folder as usual.
+
+
+Here is an example tree view for this structure:
+
+  Root
+  |
+  +--- Folder (category 1)
+  |    |    
+  |    +--- Folder
+  |    |    |
+  |    |    +--- Forum (forum 1)
+  |    |    | 
+  |    |    +--- Forum (subforum 1.1)
+  |    |    |
+  |    |    +--- Forum (subforum 1.2)
+  |    |
+  |    +--- Folder
+  |         |
+  |         +--- Forum (forum 2)
+  |         |
+  |         +--- Forum (subforum 2.1)
+  |
+  +--- Folder (category 2)
+       |    
+       +--- Folder
+       |    |
+       |    +--- Forum (forum 3)
+       |    | 
+       |    +--- Forum (subforum 3.1)
+       |    |
+       |    +--- Forum (subforum 3.2)
+       |    |
+       |    +--- Forum (subforum 3.3)
+       |
+       +--- Forum (forum 4, without subforums)
+
+
+Using this tree structure, the index page will look (somewhat ;-) like this:
+
+
+  Category 1 ===========================================
+
+  Forum 1
+  Subforums: subforum 1.1, subforum 1.2
+
+  ------------------------------------------------------
+
+  Forum 2
+  Subforum: subforum 2.1
+
+  Category 2 ===========================================
+
+  Forum 3
+  Subforums: subforum 3.1, subforum 3.2, subforum 3.3
+
+  ------------------------------------------------------
+
+  Forum 4
+
+  ------------------------------------------------------
+
+
+Language support:
+-----------------
+
+This module supports multiple languages. If you want to translate the module
+to a new language, you'll have to do the following:
+
+Copy lang/english.php to lang/yourlang.php (yourlang.php must have the
+same name as Phorum's main language file that you use). After this,
+translate the strings in lang/yourlang.php.
+
+If you have created a translation for this module, please post the script
+lang/yourlang.php in the thread for this module, so we can add the
+translation to the module distribution.
+

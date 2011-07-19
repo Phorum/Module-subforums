@@ -1,0 +1,17 @@
+title: Subforums
+desc: This module implements a simple subforums system. On the index page, subforums will be listed as simple links for each forum that has subforums. On the list page, details for the subforums are listed at the top of the page. The breadcrumbs will be modified to represent the subforum structure. Check the module's README file for information on how to organize your forums and folders for this module.
+version: 1.0.1
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum.org/phorum5/read.php?62,138818,138818#msg-138818
+category: viewlayout
+
+hook: lang|
+hook: page_index|phorum_mod_subforums_page_index
+hook: page_list|phorum_mod_subforums_page_list
+hook: index|phorum_mod_subforums_index
+hook: start_output|phorum_mod_subforums_start_output 
+hook: after_header|phorum_mod_subforums_after_header
+
+// We run this hook as early as possible, to make sure that formatting by
+// other hooks is applied to the special forums + subforums too.
+priority: run hook index before *

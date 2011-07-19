@@ -1,0 +1,14 @@
+Changelog:
+----------
+
+2009-08-16 v1.0.1
+
+   - Fix for an undefined index warning from PHP. There's no functional
+     change in this release, but this prevents a PHP warning from
+     being displayed on systems that have error reporting to the
+     output page enabled.
+
+2009-06-21 v1.0.0
+
+   - Initial release.
+
