@@ -1,8 +1,8 @@
-Module  : Subforums
-Version : 1.0.1
+Module  : @TITLE@
+Version : @VERSION@
 Author  : Maurice Makaay <maurice@phorum.org>
 
-This module implements a simple subforums system for Phorum.
+@DESCRIPTION@
 
 
 Features:
@@ -27,14 +27,14 @@ Features:
 Install:
 --------
 
-- Unpack the archive and move the directory "subforums" to the directory
+- Unpack the archive and move the directory "@MODULE_ID@" to the directory
   "mods" within your Phorum installation (unless this module was packaged
   with your Phorum release);
 
 - Login as administrator in Phorum's administrative interface and
   go to the "Modules" section;
 
-- Enable the module "Subforums".
+- Enable the module "@TITLE@".
 
 - Structure the forums and folders to match this module's requirements.
   See below for a description.
